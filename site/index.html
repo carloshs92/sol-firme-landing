@@ -140,7 +140,7 @@ p { margin: 0; }
   font-family: var(--font-cartel); font-size: 22px; background: var(--amarillo); color: var(--tinta-sobre-color);
   border: var(--borde-grueso) solid var(--trazo); border-radius: 50%; }
 .captura { border: var(--borde-grueso) solid var(--trazo); border-radius: var(--radio-carta); overflow: hidden; box-shadow: var(--sombra-sticker);
-  background: var(--fondo); aspect-ratio: 780 / 1000; max-width: 100%; }
+  background: var(--fondo); aspect-ratio: 780 / 900; max-width: 100%; }
 .captura img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 
 /* Qué aprendes: fichas por idea, cada una con su color de significado. */
@@ -237,14 +237,15 @@ footer { border-top: var(--borde-grueso) solid var(--trazo); padding-block: 36px
         <div class="marcas" aria-hidden="true"><span style="left:12.5%">1%</span><span style="left:37.5%">3%</span><span style="left:96%">8%</span></div>
       </div>
       <div class="acciones">
+        <!-- Enlace al juego: está aquí y en "Jugar gratis" al final. -->
         <a class="btn btn-accion" href="https://carloshs92.github.io/bcrp-game/">Jugar ahora</a>
         <a class="btn" href="#docentes">Soy docente</a>
       </div>
-      <p class="nota">Se juega en el navegador, en celular o computadora. Sin cuenta y sin instalar nada.</p>
+      <p class="nota">Se juega en el navegador, en celular o computadora, de día o de noche. Sin cuenta y sin instalar nada.</p>
     </div>
     <div class="celular">
-      <img class="dia" src="img/turno-dia.webp" width="780" height="1215" alt="Pantalla del juego: la inflación en 2.3%, dentro de la meta, y el titular del mes.">
-      <img class="noche" src="img/turno-noche.webp" width="780" height="1215" alt="Pantalla del juego: la inflación en 2.3%, dentro de la meta, y el titular del mes.">
+      <img class="dia" src="img/turno-dia.webp" width="780" height="1530" alt="Pantalla del juego: la inflación en 2.5%, dentro de la meta, la carta del mes y las respuestas para elegir.">
+      <img class="noche" src="img/turno-noche.webp" width="780" height="1530" alt="Pantalla del juego: la inflación en 2.5%, dentro de la meta, la carta del mes y las respuestas para elegir.">
     </div>
   </section>
 
@@ -259,27 +260,27 @@ footer { border-top: var(--borde-grueso) solid var(--trazo); padding-block: 36px
       </div>
       <ol class="pasos">
         <li class="paso">
-          <div class="paso-cabeza"><h3>Mira cómo está el país</h3></div>
-          <p>La inflación, el dólar, el empleo y la confianza de la gente, en un vistazo.</p>
+          <div class="paso-cabeza"><h3>Llega la carta del mes</h3></div>
+          <p>Arriba, la inflación frente a la meta, el dólar, el empleo y la confianza. Abajo, lo que pasa en el país.</p>
           <div class="captura">
-            <img class="dia" src="img/turno-dia.webp" width="780" height="1215" alt="Termómetro de inflación y titular del mes." loading="lazy">
-            <img class="noche" src="img/turno-noche.webp" width="780" height="1215" alt="Termómetro de inflación y titular del mes." loading="lazy">
+            <img class="dia" src="img/carta-dia.webp" width="780" height="900" alt="El tablero con la inflación en la meta y la carta del mes: Gamarra no para de vender." loading="lazy">
+            <img class="noche" src="img/carta-noche.webp" width="780" height="900" alt="El tablero con la inflación en la meta y la carta del mes: Gamarra no para de vender." loading="lazy">
           </div>
         </li>
         <li class="paso">
-          <div class="paso-cabeza"><h3>Elige una respuesta</h3></div>
-          <p>Apretar, dar aire, subir un paso o esperar. Cada respuesta muestra a quién le cuesta.</p>
+          <div class="paso-cabeza"><h3>Compara y elige</h3></div>
+          <p>Cada respuesta muestra dónde quedaría la inflación y a quién le duele. Al tocarla, te dice por qué.</p>
           <div class="captura">
-            <img class="dia" src="img/respuestas-dia.webp" width="780" height="1000" alt="Cuatro respuestas con su costo: apretar fuerte, dar aire, subir un paso y esperar." loading="lazy">
-            <img class="noche" src="img/respuestas-noche.webp" width="780" height="1000" alt="Cuatro respuestas con su costo: apretar fuerte, dar aire, subir un paso y esperar." loading="lazy">
+            <img class="dia" src="img/elegida-dia.webp" width="780" height="900" alt="La respuesta Subir un paso elegida: la inflación quedaría entre 1.6% y 3.4%, y Kevin sufre porque la cuota de su préstamo pesa más." loading="lazy">
+            <img class="noche" src="img/elegida-noche.webp" width="780" height="900" alt="La respuesta Subir un paso elegida: la inflación quedaría entre 1.6% y 3.4%, y Kevin sufre porque la cuota de su préstamo pesa más." loading="lazy">
           </div>
         </li>
         <li class="paso">
-          <div class="paso-cabeza"><h3>Anuncia y el mes pasa</h3></div>
-          <p>Sellas tu decisión y ves qué cambió. A veces llega un imprevisto de última hora.</p>
+          <div class="paso-cabeza"><h3>Cierra el mes</h3></div>
+          <p>Anuncias, ves qué cambió y se arranca la hoja del almanaque: te dice si el mes terminó en la meta. A veces llega un imprevisto de última hora.</p>
           <div class="captura">
-            <img class="dia" src="img/mes-pasa-dia.webp" width="780" height="1095" alt="La decisión anunciada con un sello mientras el mes pasa." loading="lazy">
-            <img class="noche" src="img/mes-pasa-noche.webp" width="780" height="1095" alt="La decisión anunciada con un sello mientras el mes pasa." loading="lazy">
+            <img class="dia" src="img/almanaque-dia.webp" width="780" height="900" alt="La hoja del almanaque: Enero terminó en la meta, empieza febrero." loading="lazy">
+            <img class="noche" src="img/almanaque-noche.webp" width="780" height="900" alt="La hoja del almanaque: Enero terminó en la meta, empieza febrero." loading="lazy">
           </div>
         </li>
       </ol>
@@ -321,6 +322,7 @@ footer { border-top: var(--borde-grueso) solid var(--trazo); padding-block: 36px
       <div class="seccion-cabeza">
         <p class="etiqueta">Modos de juego</p>
         <h2>De cinco minutos a un mandato entero</h2>
+        <p>Cada modo tiene su propia música, generada en el navegador: chicha, huayno, tecnocumbia, cumbia amazónica y yaraví.</p>
       </div>
       <div class="modos">
         <article class="modo modo-historia">
@@ -336,7 +338,7 @@ footer { border-top: var(--borde-grueso) solid var(--trazo); padding-block: 36px
         </article>
         <article class="modo">
           <div class="modo-cabeza"><h3>Tutorial</h3><span class="duracion">4 meses guiados</span></div>
-          <p>Una asesora te enseña la carta, las respuestas y los termómetros mientras juegas.</p>
+          <p>Una asesora te señala cada parte y tú mismo eliges la respuesta y cierras el mes. Se aprende jugando.</p>
         </article>
         <article class="modo">
           <div class="modo-cabeza"><h3>Modo Libre</h3><span class="duracion">12 meses</span></div>
