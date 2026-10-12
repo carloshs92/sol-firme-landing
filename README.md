@@ -17,7 +17,7 @@ Página de presentación de [Sol Firme](https://github.com/carloshs92/bcrp-game)
 
 ## Enlace al juego
 
-"Jugar ahora" y "Jugar gratis" llevan a la dirección donde esté publicado el juego. Hoy apuntan a `https://carloshs92.github.io/bcrp-game/`; si el juego se publica en otro lugar, se cambian esos dos `href` en `site/index.html`.
+"Jugar ahora" y "Jugar gratis" llevan a la dirección donde esté publicado el juego. Hoy apuntan a `https://bcrp-game.carlos-hs-92.workers.dev/` (Cloudflare Workers); si el juego se publica en otro lugar, se cambian esos dos `href` en `site/index.html`.
 
 ## Ver en local
 
