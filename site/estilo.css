@@ -1,0 +1,203 @@
+/* Diseño: cartel chicha de una columna en celular (franjas de color, contorno grueso, sombra dura);
+   en escritorio el hero se abre en dos columnas con el celular a la derecha.
+   Tokens: copia de src/tokens.css del juego (design system "Sol Firme Chicha"). */
+:root {
+  --fondo: #ffffff;  --superficie: #f7f3fb;
+  --tinta: #17101f;  --tinta-suave: #5b4e66;  --tinta-sobre-color: #17101f;  --trazo: #17101f;
+  --papel: #fffaf0;
+  --fucsia: #ff2e93; --amarillo: #ffe14d; --naranja: #ff7a1a; --verde: #12c25a; --cian: #18c6e8; --lila: #b48cff;
+  --alerta-texto: #c2006a; --meta-texto: #0b7a3a; --foco: #6b2fd6;
+  --sombra-sticker: 4px 4px 0 #17101f; --sombra-presionada: 1px 1px 0 #17101f;
+  --sombra-accion: 4px 4px 0 #17101f;  --sombra-accion-presionada: 1px 1px 0 #17101f;
+  --borde-grueso: 3px; --borde-fino: 2px;
+  --radio-letrero: 4px; --radio-carta: 14px; --radio-pastilla: 999px;
+  --font-cartel: "Bungee", "Arial Black", Impact, sans-serif;
+  --font-texto: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --ver-dia: block; --ver-noche: none;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dia"]) {
+    --fondo: #120d18; --superficie: #1e1726; --tinta: #fff7e8; --tinta-suave: #c9bbd6; --trazo: #fff7e8;
+    --fucsia: #ff4fa6; --naranja: #ff8a33; --verde: #2fe07a; --cian: #3fd6f2; --lila: #c4a3ff;
+    --alerta-texto: #ff7cbd; --meta-texto: #5eeb98; --foco: #ffe14d;
+    --sombra-sticker: 4px 4px 0 #ff4fa6; --sombra-presionada: 1px 1px 0 #ff4fa6;
+    --sombra-accion: 4px 4px 0 #fff7e8; --sombra-accion-presionada: 1px 1px 0 #fff7e8;
+    --ver-dia: none; --ver-noche: block; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"], :root[data-theme="noche"] {
+  --fondo: #120d18; --superficie: #1e1726; --tinta: #fff7e8; --tinta-suave: #c9bbd6; --trazo: #fff7e8;
+  --fucsia: #ff4fa6; --naranja: #ff8a33; --verde: #2fe07a; --cian: #3fd6f2; --lila: #c4a3ff;
+  --alerta-texto: #ff7cbd; --meta-texto: #5eeb98; --foco: #ffe14d;
+  --sombra-sticker: 4px 4px 0 #ff4fa6; --sombra-presionada: 1px 1px 0 #ff4fa6;
+  --sombra-accion: 4px 4px 0 #fff7e8; --sombra-accion-presionada: 1px 1px 0 #fff7e8;
+  --ver-dia: none; --ver-noche: block; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { margin: 0; background: var(--fondo); color: var(--tinta); font-family: var(--font-texto); font-size: 17px; line-height: 1.5; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }
+.dia { display: var(--ver-dia); } .noche { display: var(--ver-noche); }
+
+.envoltura { max-width: 1120px; margin-inline: auto; padding-inline: 16px; }
+@media (min-width: 600px) { .envoltura { padding-inline: 24px; } }
+
+/* Franja chicha: los cinco colores del cartel, de borde a borde. */
+.franja { height: 14px; background: linear-gradient(90deg,
+  var(--fucsia) 0 20%, var(--naranja) 20% 40%, var(--amarillo) 40% 60%, var(--verde) 60% 80%, var(--cian) 80% 100%);
+  border-block: var(--borde-grueso) solid var(--trazo); }
+
+.etiqueta { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--tinta-suave); margin: 0; }
+h1, h2, h3 { font-family: var(--font-cartel); font-weight: 400; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(26px, 6vw, 40px); line-height: 1.1; }
+h3 { font-size: 19px; line-height: 1.2; }
+p { margin: 0; }
+
+/* Botones del design system: contorno grueso y sombra dura; uno solo fucsia por pantalla. */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 22px;
+  font-family: var(--font-cartel); font-size: 17px; text-decoration: none; white-space: nowrap; color: var(--tinta);
+  background: var(--fondo); border: var(--borde-grueso) solid var(--trazo); border-radius: var(--radio-letrero);
+  box-shadow: var(--sombra-sticker); transition: transform .08s, box-shadow .08s; }
+.btn:active { transform: translate(3px, 3px); box-shadow: var(--sombra-presionada); }
+.btn-accion { background: var(--fucsia); color: var(--tinta-sobre-color); box-shadow: var(--sombra-accion); font-size: 20px; min-height: 60px; padding: 0 28px; }
+.btn-accion:active { box-shadow: var(--sombra-accion-presionada); }
+.btn-amarillo { background: var(--amarillo); color: var(--tinta-sobre-color); }
+@media (hover: hover) { .btn:hover { transform: translate(-1px, -1px); } }
+
+/* Barra superior */
+.barra { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 14px; }
+.marca { font-family: var(--font-cartel); font-size: 20px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.sol { width: 34px; height: 34px; flex: none; }
+.sol circle { fill: var(--amarillo); stroke: var(--trazo); stroke-width: 3; }
+.sol path { stroke: var(--trazo); stroke-width: 3; stroke-linecap: round; }
+.barra nav { display: flex; gap: 18px; font-weight: 700; }
+.barra nav a { text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.barra nav a:hover { text-decoration: underline; text-decoration-thickness: 3px; }
+@media (max-width: 599px) { .barra nav .ocultable { display: none; } }
+
+/* Hero */
+.hero { display: grid; gap: 36px; padding-block: 28px 56px; align-items: center; }
+@media (min-width: 900px) { .hero { grid-template-columns: 1.15fr .85fr; padding-block: 48px 80px; } }
+.hero-texto { display: grid; gap: 20px; min-width: 0; }
+.titulo { font-size: clamp(56px, 16vw, 112px); line-height: .95; letter-spacing: .01em;
+  text-shadow: 4px 4px 0 var(--amarillo), 8px 8px 0 var(--fucsia); }
+.lema { font-family: var(--font-cartel); font-size: clamp(20px, 4.6vw, 28px); line-height: 1.2; color: var(--alerta-texto); }
+.bajada { font-size: 19px; line-height: 1.55; max-width: 34em; }
+.acciones { display: flex; flex-wrap: wrap; gap: 14px 18px; align-items: center; }
+.nota { font-size: 15px; color: var(--tinta-suave); }
+
+/* El termómetro de la meta: el mismo instrumento del juego. */
+.meta { display: grid; gap: 8px; max-width: 420px; padding: 14px 16px 12px; background: var(--superficie);
+  border: var(--borde-grueso) solid var(--trazo); border-radius: var(--radio-carta); }
+.meta-fila { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.meta-cifra { font-family: var(--font-cartel); font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
+.pastilla { display: inline-block; padding: 4px 12px; font-weight: 700; font-size: 15px; border: var(--borde-fino) solid var(--trazo);
+  border-radius: var(--radio-pastilla); background: var(--verde); color: var(--tinta-sobre-color); }
+.tubo { position: relative; height: 20px; border: var(--borde-grueso) solid var(--trazo); border-radius: var(--radio-pastilla); background: var(--fondo); }
+/* Escala 0–8%: la banda 1–3% va de 12.5% a 37.5% del tubo. */
+.tubo .banda { position: absolute; inset-block: 0; left: 12.5%; width: 25%; background: var(--verde); }
+.tubo .aguja { position: absolute; top: -8px; bottom: -8px; left: calc(25% - 3px); width: 6px; border-radius: 3px; background: var(--trazo);
+  animation: aguja 4.5s ease-in-out infinite; }
+@keyframes aguja { 0%, 100% { left: calc(25% - 3px); } 30% { left: calc(33% - 3px); } 60% { left: calc(19% - 3px); } }
+.marcas { position: relative; height: 20px; font-family: var(--font-cartel); font-size: 13px; color: var(--tinta-suave); font-variant-numeric: tabular-nums; }
+.marcas span { position: absolute; transform: translateX(-50%); }
+
+/* Celular con la captura real */
+.celular { justify-self: center; width: min(320px, 82vw); padding: 12px; background: var(--trazo); border-radius: 36px;
+  box-shadow: 8px 8px 0 var(--fucsia); transform: rotate(2deg); }
+.celular img { border-radius: 26px; width: 100%; height: auto; }
+
+/* Secciones */
+.seccion { padding-block: 64px; }
+.seccion-cabeza { display: grid; gap: 10px; margin-bottom: 32px; max-width: 46em; }
+.seccion-cabeza p:not(.etiqueta) { font-size: 18px; color: var(--tinta-suave); }
+.fondo-superficie { background: var(--superficie); border-block: var(--borde-grueso) solid var(--trazo); }
+
+/* Así se juega un mes: tres pasos en orden. */
+.pasos { display: grid; gap: 28px; list-style: none; padding: 0; margin: 0; counter-reset: paso; }
+@media (min-width: 760px) { .pasos { grid-template-columns: repeat(3, 1fr); } }
+.paso { display: grid; gap: 14px; align-content: start; min-width: 0; counter-increment: paso; }
+.paso-cabeza { display: flex; gap: 12px; align-items: center; }
+.paso-cabeza::before { content: counter(paso); flex: none; display: grid; place-items: center; width: 44px; height: 44px;
+  font-family: var(--font-cartel); font-size: 22px; background: var(--amarillo); color: var(--tinta-sobre-color);
+  border: var(--borde-grueso) solid var(--trazo); border-radius: 50%; }
+.captura { border: var(--borde-grueso) solid var(--trazo); border-radius: var(--radio-carta); overflow: hidden; box-shadow: var(--sombra-sticker);
+  background: var(--fondo); aspect-ratio: 780 / 900; max-width: 100%; }
+.captura img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+/* Qué aprendes: fichas por idea, cada una con su color de significado. */
+.ideas { display: grid; gap: 18px; }
+@media (min-width: 700px) { .ideas { grid-template-columns: repeat(2, 1fr); } }
+.idea { display: grid; gap: 8px; padding: 20px; border: var(--borde-grueso) solid var(--trazo); border-radius: var(--radio-carta);
+  background: var(--fondo); min-width: 0; }
+.idea-sello { justify-self: start; padding: 3px 10px; font-family: var(--font-cartel); font-size: 14px; color: var(--tinta-sobre-color);
+  border: var(--borde-fino) solid var(--trazo); border-radius: var(--radio-letrero); }
+.cadena { font-family: var(--font-cartel); font-size: 15px; line-height: 1.6; }
+
+/* Modos */
+.modos { display: grid; gap: 16px; }
+@media (min-width: 760px) { .modos { grid-template-columns: repeat(2, 1fr); } .modo-historia { grid-row: span 2; } }
+.modo { display: grid; gap: 8px; align-content: start; padding: 20px; border: var(--borde-grueso) solid var(--trazo); border-radius: var(--radio-carta);
+  background: var(--fondo); box-shadow: var(--sombra-sticker); min-width: 0; }
+.modo-cabeza { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.duracion { font-weight: 700; font-size: 14px; color: var(--tinta-suave); white-space: nowrap; }
+.capitulos { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 0; }
+.capitulos li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding-block: 10px; border-top: var(--borde-fino) dashed var(--tinta-suave); }
+.capitulos b { font-family: var(--font-cartel); font-weight: 400; font-size: 15px; font-variant-numeric: tabular-nums; }
+
+/* Medallas */
+.medallas { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 22px 16px; }
+.medalla { display: grid; justify-items: center; gap: 8px; text-align: center; }
+.medalla strong { font-size: 15px; line-height: 1.3; }
+.medal { display: block; overflow: visible; }
+.medal.m-amarillo { --m: var(--amarillo); } .medal.m-verde { --m: var(--verde); } .medal.m-cian { --m: var(--cian); }
+.medal.m-fucsia { --m: var(--fucsia); } .medal.m-naranja { --m: var(--naranja); } .medal.m-lila { --m: var(--lila); }
+.medal .m-sombra { fill: var(--trazo); }
+.medal .m-cuerpo { fill: var(--m); stroke: var(--trazo); stroke-width: 3; stroke-linejoin: round; }
+.m-art * { fill: none; stroke: var(--tinta-sobre-color); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.m-art .p { fill: var(--papel); } .m-art .k { fill: var(--tinta-sobre-color); } .m-art .y { fill: var(--amarillo); }
+.m-art .f { fill: var(--fucsia); } .m-art .c { fill: var(--cian); } .m-art .v { fill: var(--verde); }
+.m-art .n { fill: var(--naranja); } .m-art .l { fill: var(--lila); }
+.m-art .s15 { stroke-width: 1.5; } .m-art .s2 { stroke-width: 2; } .m-art .w3 { stroke-width: 3; } .m-art .w4 { stroke-width: 4; }
+.m-art .w7 { stroke-width: 7.5; } .m-art .w9 { stroke-width: 9.5; }
+.m-art .w4p { stroke: var(--papel); stroke-width: 3.5; } .m-art .w5y { stroke: var(--amarillo); stroke-width: 4.5; }
+.m-art .sp { stroke: var(--papel); stroke-width: 1.6; } .m-art .of { stroke: var(--alerta-texto); stroke-width: 2.2; }
+.m-art .dash { stroke-width: 2.5; stroke-dasharray: 3 4; }
+.m-art .m-txt { fill: var(--tinta-sobre-color); stroke: none; font-family: var(--font-cartel); }
+
+/* Docentes y apoyo: dos letreros lado a lado. */
+.dos { display: grid; gap: 22px; }
+@media (min-width: 860px) { .dos { grid-template-columns: 1fr 1fr; } }
+.letrero { display: grid; gap: 14px; align-content: start; padding: 24px; border: var(--borde-grueso) solid var(--trazo);
+  border-radius: var(--radio-carta); box-shadow: var(--sombra-sticker); min-width: 0; }
+.letrero-cian { background: var(--cian); color: var(--tinta-sobre-color); }
+.letrero-amarillo { background: var(--amarillo); color: var(--tinta-sobre-color); }
+.letrero ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.letrero .btn { justify-self: start; }
+.pendiente { display: inline-block; padding: 2px 10px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  background: var(--papel); color: var(--tinta-sobre-color); border: var(--borde-fino) dashed var(--tinta-sobre-color); border-radius: var(--radio-letrero); }
+.pagos { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.qr { display: grid; gap: 6px; justify-items: center; width: 168px; margin: 0; padding: 8px; background: var(--papel); color: var(--tinta-sobre-color);
+  border: var(--borde-grueso) solid var(--tinta-sobre-color); border-radius: var(--radio-letrero); font-weight: 700; font-size: 14px; }
+.qr img { width: 100%; height: auto; }
+
+/* Cierre */
+.cierre { display: grid; gap: 22px; justify-items: center; text-align: center; padding-block: 72px; }
+.cierre h2 { font-size: clamp(30px, 8vw, 56px); text-shadow: 3px 3px 0 var(--amarillo); }
+
+/* Pie con el aviso de no afiliación */
+footer { border-top: var(--borde-grueso) solid var(--trazo); padding-block: 36px 48px; font-size: 15px; color: var(--tinta-suave); }
+.pie { display: grid; gap: 18px; max-width: 62em; }
+.aviso { padding: 16px 18px; border: var(--borde-grueso) solid var(--trazo); border-radius: var(--radio-letrero); background: var(--superficie); color: var(--tinta); }
+.aviso strong { font-family: var(--font-cartel); font-weight: 400; display: block; margin-bottom: 4px; }
+
+/* Selector de idioma: arriba de todo, a la derecha. */
+.idiomas { display: flex; justify-content: flex-end; gap: 6px 18px; flex-wrap: wrap; font-weight: 700; font-size: 15px; }
+.idiomas a { text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.idiomas a:hover, .idiomas a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
+.borrador { margin: 0 0 4px; padding: 8px 12px; border: var(--borde-fino) dashed var(--trazo); border-radius: var(--radio-letrero); font-size: 14px; color: var(--tinta-suave); }
