@@ -18,6 +18,12 @@
 <link rel="stylesheet" href="../estilo.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <path id="a-sol" d="M30.0 2.0 L34.9 11.6 L44.0 5.8 L43.4 16.6 L54.2 16.0 L48.4 25.1 L58.0 30.0 L48.4 34.9 L54.2 44.0 L43.4 43.4 L44.0 54.2 L34.9 48.4 L30.0 58.0 L25.1 48.4 L16.0 54.2 L16.6 43.4 L5.8 44.0 L11.6 34.9 L2.0 30.0 L11.6 25.1 L5.8 16.0 L16.6 16.6 L16.0 5.8 L25.1 11.6Z"/>
+  <path id="a-estrella" d="M30 2 37 23 58 30 37 37 30 58 23 37 2 30 23 23Z"/>
+  <path id="a-rombo" d="M30 4 56 30 30 56 4 30Z"/>
+  <circle id="a-circulo" cx="30" cy="30" r="24"/>
+</defs></svg>
 
 <div class="franja" aria-hidden="true"></div>
 <nav class="envoltura idiomas" aria-label="Simi">
@@ -40,6 +46,10 @@
 
 <main id="inicio">
   <section class="envoltura hero">
+    <div class="adorno a-amarillo" style="top:8px;right:-20px;width:clamp(72px,16vw,128px)" data-parallax="-0.25" data-giro="0.04" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-sol" x="4" y="4"/><use class="forma" href="#a-sol"/></svg></div>
+    <div class="adorno a-fucsia a-orilla" style="top:44%;width:clamp(40px,8vw,64px)" data-parallax="0.3" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-estrella" x="4" y="4"/><use class="forma" href="#a-estrella"/></svg></div>
+    <div class="adorno a-cian" style="bottom:28px;right:6%;width:clamp(34px,6vw,52px)" data-parallax="-0.4" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-rombo" x="4" y="4"/><use class="forma" href="#a-rombo"/></svg></div>
+    <div class="adorno a-lila solo-ancho" style="top:18%;left:46%;width:56px" data-parallax="0.2" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-circulo" x="4" y="4"/><use class="forma" href="#a-circulo"/></svg></div>
     <div class="hero-texto">
       <p class="etiqueta">Perú suyup Banco Centralninmanta mana qullqiyuq pukllay</p>
       <h1 class="titulo">Sol Firme</h1>
@@ -57,7 +67,7 @@
       </div>
       <p class="nota">Navegadorpi pukllakun, celularpi utaq computadorapi, p'unchawpi utaq tutapi. Mana cuentayuq, mana imatapas churaspa. Pukllayqa kunanqa castellanollapiraq; runasimipi, inglés simipipas hamushanmi.</p>
     </div>
-    <div class="celular">
+    <div class="celular" data-parallax="-0.08">
       <img class="dia" src="../img/turno-dia.webp" width="780" height="1530" alt="Pukllaypa pantallan: inflación 2.5%-pi, chayana ukhupi, killapa kartan, akllanapaq kutichiykunapas.">
       <img class="noche" src="../img/turno-noche.webp" width="780" height="1530" alt="Pukllaypa pantallan: inflación 2.5%-pi, chayana ukhupi, killapa kartan, akllanapaq kutichiykunapas.">
     </div>
@@ -66,6 +76,8 @@
   <div class="franja" aria-hidden="true"></div>
 
   <section class="fondo-superficie" id="como">
+    <div class="adorno a-amarillo" style="top:28px;right:4%;width:clamp(40px,8vw,60px)" data-parallax="0.3" data-giro="0.05" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-estrella" x="4" y="4"/><use class="forma" href="#a-estrella"/></svg></div>
+    <div class="adorno a-cian" style="bottom:12%;left:-22px;width:clamp(56px,10vw,84px)" data-parallax="-0.3" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-circulo" x="4" y="4"/><use class="forma" href="#a-circulo"/></svg></div>
     <div class="envoltura seccion">
       <div class="seccion-cabeza">
         <p class="etiqueta">Imaynatan pukllakun</p>
@@ -132,6 +144,8 @@
   </section>
 
   <section class="fondo-superficie" id="modos">
+    <div class="adorno a-fucsia" style="top:40px;right:-12px;width:clamp(40px,7vw,58px)" data-parallax="-0.3" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-rombo" x="4" y="4"/><use class="forma" href="#a-rombo"/></svg></div>
+    <div class="adorno a-verde" style="bottom:36px;left:2%;width:clamp(52px,9vw,76px)" data-parallax="0.25" data-giro="-0.04" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-sol" x="4" y="4"/><use class="forma" href="#a-sol"/></svg></div>
     <div class="envoltura seccion">
       <div class="seccion-cabeza">
         <p class="etiqueta">Pukllana layakuna</p>
@@ -212,6 +226,8 @@
   </section>
 
   <section class="envoltura cierre">
+    <div class="adorno a-amarillo" style="top:14%;left:4%;width:clamp(64px,13vw,120px)" data-parallax="-0.3" data-giro="0.05" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-sol" x="4" y="4"/><use class="forma" href="#a-sol"/></svg></div>
+    <div class="adorno a-cian" style="bottom:16%;right:6%;width:clamp(40px,8vw,64px)" data-parallax="0.35" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-estrella" x="4" y="4"/><use class="forma" href="#a-estrella"/></svg></div>
     <h2>BCR-ta umalliyta munankichu?</h2>
     <a class="btn btn-amarillo" href="https://bcrp-game.carlos-hs-92.workers.dev/">Mana qullqiwan pukllay</a>
   </section>
@@ -224,5 +240,6 @@
     <p>Ñawpa willakuykunaqa BCRPDatamantan hamun, BCRP-pa estadística portalninmanta. Congresopa rimasqankunaqa cheqaq rimaykunan, maymantachus hamun chaywan, mana sutiyuq rikuchisqa; kikinchasqa rimaykunaqa sut'inchasqa kashan. Llapan kawsaqkunaqa yuyaymanasqan. Perú mapaqa Natural Earthpi sayan, llapanpa kapuyninmi.</p>
   </div>
 </footer>
+<script src="../parallax.js" defer></script>
 </body>
 </html>

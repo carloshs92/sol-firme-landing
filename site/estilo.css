@@ -201,3 +201,18 @@ footer { border-top: var(--borde-grueso) solid var(--trazo); padding-block: 36px
 .idiomas a { text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
 .idiomas a:hover, .idiomas a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
 .borrador { margin: 0 0 4px; padding: 8px 12px; border: var(--borde-fino) dashed var(--trazo); border-radius: var(--radio-letrero); font-size: 14px; color: var(--tinta-suave); }
+
+/* Parallax: adornos chicha detrás del contenido (parallax.js los mueve).
+   Formas planas con contorno grueso y sombra dura, colores de los tokens. */
+main { overflow-x: clip; }
+.hero, .cierre, .fondo-superficie { position: relative; isolation: isolate; }
+.adorno { position: absolute; z-index: -1; pointer-events: none; will-change: transform; }
+.adorno svg { display: block; width: 100%; height: auto; overflow: visible; }
+.adorno .sombra { fill: var(--trazo); }
+.adorno .forma { stroke: var(--trazo); stroke-width: 3; stroke-linejoin: round; }
+.a-amarillo .forma { fill: var(--amarillo); } .a-fucsia .forma { fill: var(--fucsia); }
+.a-cian .forma { fill: var(--cian); } .a-lila .forma { fill: var(--lila); } .a-verde .forma { fill: var(--verde); }
+.celular { will-change: transform; }
+@media (max-width: 899px) { .adorno.solo-ancho { display: none; } }
+@media (prefers-reduced-motion: reduce) { .adorno, .celular { will-change: auto; } }
+.a-orilla { left: -24px; } @media (min-width: 900px) { .a-orilla { left: -72px; } }
