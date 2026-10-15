@@ -8,6 +8,7 @@ Página de presentación de [Sol Firme](https://github.com/carloshs92/bcrp-game)
 - `site/en/index.html` y `site/qu/index.html`: la misma página en inglés y en quechua sureño. Tienen la misma estructura que la española; si cambias un texto o una sección allá, cámbialo también en las otras dos.
 - `site/estilo.css`: el CSS que comparten las tres.
 - `site/parallax.js`: mueve con el scroll los adornos chicha (`.adorno`, con `data-parallax` = velocidad y `data-giro` = giro) y el celular del inicio. Solo usa `transform`, actualiza solo las secciones a la vista y se apaga con "reducir movimiento".
+- SEO: cada página tiene `canonical`, `hreflang`, Open Graph con `img/compartir-{es,en,qu}.jpg` (1200×630) y datos estructurados JSON-LD (`VideoGame` + `LearningResource`). `site/sitemap.xml` lista las tres páginas; envíalo en Google Search Console. `site/llms.txt` es el resumen para asistentes de IA: si cambia el juego o la landing, actualízalo.
 - `site/img/`: capturas reales del juego en tema Día y Noche (`*-dia.webp`, `*-noche.webp`), 780 px de ancho.
 - `.github/workflows/deploy.yml`: cada push a `main` publica `site/` en GitHub Pages.
 
