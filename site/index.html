@@ -195,8 +195,9 @@ p { margin: 0; }
 .pendiente { display: inline-block; padding: 2px 10px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
   background: var(--papel); color: var(--tinta-sobre-color); border: var(--borde-fino) dashed var(--tinta-sobre-color); border-radius: var(--radio-letrero); }
 .pagos { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
-.qr { display: grid; place-items: center; width: 112px; height: 112px; background: var(--papel); color: var(--tinta-sobre-color);
-  border: var(--borde-grueso) dashed var(--tinta-sobre-color); border-radius: var(--radio-letrero); font-weight: 700; text-align: center; font-size: 14px; line-height: 1.2; }
+.qr { display: grid; gap: 6px; justify-items: center; width: 168px; margin: 0; padding: 8px; background: var(--papel); color: var(--tinta-sobre-color);
+  border: var(--borde-grueso) solid var(--tinta-sobre-color); border-radius: var(--radio-letrero); font-weight: 700; font-size: 14px; }
+.qr img { width: 100%; height: auto; }
 
 /* Cierre */
 .cierre { display: grid; gap: 22px; justify-items: center; text-align: center; padding-block: 72px; }
@@ -392,9 +393,9 @@ footer { border-top: var(--borde-grueso) solid var(--trazo); padding-block: 36px
         <p>Sol Firme es gratis para todos. Si te sirvió, tu aporte paga nuevos capítulos, mejores imágenes y la versión para colegios.</p>
         <div class="pagos">
           <a class="btn" href="#apoya">Aportar con Ko-fi</a>
-          <div class="qr">QR de Yape<br>en camino</div>
+          <figure class="qr"><img src="img/yape-qr.webp" width="480" height="480" alt="Código QR de Yape para aportar a Sol Firme."><figcaption>Escanea con Yape</figcaption></figure>
         </div>
-        <p><span class="pendiente">Ko-fi y Yape aún por activar</span></p>
+        <p><span class="pendiente">Ko-fi aún por activar</span></p>
       </article>
     </div>
   </section>
