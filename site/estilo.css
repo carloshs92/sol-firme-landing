@@ -216,3 +216,9 @@ main { overflow-x: clip; }
 @media (max-width: 899px) { .adorno.solo-ancho { display: none; } }
 @media (prefers-reduced-motion: reduce) { .adorno, .celular { will-change: auto; } }
 .a-orilla { left: -24px; } @media (min-width: 900px) { .a-orilla { left: -72px; } }
+
+/* Modos en familias, como en la portada del juego: Tutorial, "Preside el BCR" y "Recreo". */
+.familia { grid-column: 1 / -1; margin: 18px 0 0; font-family: var(--font-cartel); font-size: 20px; text-transform: uppercase; letter-spacing: .04em; }
+.familia::before { content: ""; display: inline-block; width: 14px; height: 14px; margin-right: 10px; background: var(--fucsia); border: var(--borde-fino) solid var(--trazo); transform: rotate(45deg); }
+@media (min-width: 760px) { .modo-tutorial { grid-column: 1 / -1; } }
+.modo .captura { margin-top: 6px; aspect-ratio: 780 / 900; }
