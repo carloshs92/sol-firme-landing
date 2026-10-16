@@ -2,9 +2,11 @@
 
 > Sol Firme es un juego educativo gratis sobre la política monetaria del Perú. El jugador preside el Banco Central de Reserva del Perú (BCR) y, mes a mes, debe mantener la inflación dentro de la meta de 1% a 3% sin apagar la economía. Es un proyecto independiente: no está afiliado al BCRP ni habla en su nombre.
 
-Sol Firme is a free educational game about monetary policy in Peru. You chair Peru's central bank (BCR) and keep inflation inside the 1%–3% target band, month after month, without switching the economy off. Independent project, not affiliated with the BCRP. The game is in Spanish; English and Quechua versions are in progress.
+Sol Firme is a free educational game about monetary policy in Peru. You chair Peru's central bank (BCR) and keep inflation inside the 1%–3% target band, month after month, without switching the economy off. Independent project, not affiliated with the BCRP. The game is available in Spanish, English (?lang=en) and Southern Quechua (?lang=qu, pending native review).
 
-- Jugar (gratis, en el navegador, sin cuenta): https://bcrp-game.carlos-hs-92.workers.dev/
+- Jugar (gratis, en el navegador, sin cuenta; funciona sin internet desde la segunda visita): https://bcrp-game.carlos-hs-92.workers.dev/
+- Play in English: https://bcrp-game.carlos-hs-92.workers.dev/?lang=en
+- Runasimipi pukllay (quechua sureño, en prueba): https://bcrp-game.carlos-hs-92.workers.dev/?lang=qu
 - Página en español: https://carloshs92.github.io/sol-firme-landing/
 - English page: https://carloshs92.github.io/sol-firme-landing/en/
 - Runasimi (quechua sureño, borrador): https://carloshs92.github.io/sol-firme-landing/qu/
@@ -12,8 +14,10 @@ Sol Firme is a free educational game about monetary policy in Peru. You chair Pe
 ## Cómo se juega
 
 - Cada mes llega una carta con lo que pasa en el país (el dólar sube, un sector vende más, el Congreso cita al presidente del BCR).
-- El jugador compara 2 a 4 respuestas con nombre (subir la tasa, esperar, dar aire, defender el sol…) y ve a quién le duele cada una.
-- Cierra el mes y ve el resultado. Lo que decide hoy llega a los precios meses después: hay que mirar lo que ya viene en camino.
+- El tablero muestra la inflación frente a la meta, el empleo y la credibilidad; el dólar, las reservas y el Congreso aparecen cuando entran en juego.
+- El jugador elige entre 2 y 4 respuestas con nombre (subir un paso, mantener la tasa, dar aire, calmar el dólar…). Cada una dice qué hace con la tasa (y con los dólares o el comunicado cuando toca) y a quién le duele. No dice dónde quedará la inflación: se decide a ciegas, como en la realidad.
+- Se empieza solo con la tasa; el comunicado (Firme, Neutral o Calma) llega el segundo mes y la compra o venta de dólares, el tercero.
+- Antes del resultado, el jugador predice si la inflación sube, se queda o baja. Luego ve lo esperado frente a lo que pasó y, con "Quiero entender más", por qué.
 
 ## Qué enseña
 
@@ -25,15 +29,19 @@ Sol Firme is a free educational game about monetary policy in Peru. You chair Pe
 ## Modos
 
 - Tutorial: 4 meses guiados.
-- Modo Libre: un mandato de 12 meses; si cumple, el Directorio ratifica al jugador.
-- Mandato exprés: 6 meses, cabe en una clase.
-- Reto de la semana: las mismas cartas para todos, para comparar puntajes en un salón.
-- Modo Historia: 5 capítulos reales con datos de BCRPData (hiperinflación de 1990, crisis de 2008, El Niño costero de 2017, pandemia de 2020, inflación de 2021–23) que comparan las decisiones del jugador con las del BCRP real.
+- Preside el BCR:
+  - Modo Historia: 5 capítulos reales con datos de BCRPData (hiperinflación de 1990, crisis de 2008, El Niño costero de 2017, pandemia de 2020, inflación de 2021–23) que comparan las decisiones del jugador con las del BCRP real.
+  - Modo Libre: un mandato de 12 meses; si cumple, el Directorio ratifica al jugador.
+  - Mandato exprés: 6 meses, cabe en una clase. Empieza y termina con 4 preguntas rápidas.
+- Recreo (minijuegos):
+  - ¿Quién la malogró?: 5 meses reales (2014–2026) en que los precios saltaron. Con la noticia del mes como pista, el jugador interroga a la Caserita (alimentos), el Grifero (combustible) y el Cobrador (pasajes) y acusa al culpable. Las causas vienen de notas publicadas (INEI y prensa).
+  - ¿Cuotitas? ¡Aguanta!: llegar a fin de mes durante seis meses eligiendo tarjeta de banco o de caja municipal, cómo pagar cada gasto y si pagar el mínimo o todo. Usa las tasas promedio reales de BCRPData.
 
 ## Para docentes
 
 - Público: 5.º de secundaria y primeros ciclos de universidad.
-- Gratis para estudiantes, siempre. Funciona en el celular de cada alumno.
+- Gratis para estudiantes, siempre. Funciona en el celular de cada alumno, sin internet desde la segunda visita, sin reloj si se desea y con lector de pantalla.
+- Al final del Mandato exprés, "Lo que aprendiste" compara la prueba de entrada y la de salida por conceptos y da un código SF-XXXX-XXXX-XXXX. El docente pega los códigos del salón (incluso un chat de WhatsApp exportado) en la página para docentes del juego (?docente) y ve el resumen. No se guarda ni se envía nada, y los códigos no llevan datos personales.
 - Datos históricos de BCRPData (portal de estadísticas del BCRP). Las frases del Congreso son declaraciones reales con fuente, mostradas sin nombre. Los personajes son ficticios.
 
 ## Apoyo

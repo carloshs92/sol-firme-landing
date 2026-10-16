@@ -71,7 +71,11 @@
    "gamePlatform": "Navegador web (celular o computadora)",
    "applicationCategory": "Game",
    "operatingSystem": "Cualquiera con navegador",
-   "inLanguage": "es",
+   "inLanguage": [
+    "es",
+    "en",
+    "qu"
+   ],
    "isAccessibleForFree": true,
    "offers": {
     "@type": "Offer",
@@ -92,7 +96,9 @@
     "Política monetaria",
     "Meta de inflación del BCRP (2%, rango de 1% a 3%)",
     "Tasa de interés de referencia",
-    "Expectativas y credibilidad del banco central"
+    "Expectativas y credibilidad del banco central",
+    "Inflación por alimentos, combustible y transporte",
+    "Costo del crédito: tarjetas y préstamos"
    ],
    "audience": {
     "@type": "EducationalAudience",
@@ -165,14 +171,14 @@
       </div>
       <div class="acciones">
         <!-- Enlace al juego: está aquí y en "Jugar gratis" al final. -->
-        <a class="btn btn-accion" href="https://bcrp-game.carlos-hs-92.workers.dev/">Play now</a>
+        <a class="btn btn-accion" href="https://bcrp-game.carlos-hs-92.workers.dev/?lang=en">Play now</a>
         <a class="btn" href="#docentes">I'm a teacher</a>
       </div>
-      <p class="nota">It runs in the browser, on a phone or a computer, by day or by night. No account, nothing to install. The game is in Spanish for now; English and Quechua are on the way.</p>
+      <p class="nota">It runs in the browser, on a phone or a computer, by day or by night. No account, nothing to install, and from the second visit it works offline. Also in Spanish and Quechua.</p>
     </div>
     <div class="celular" data-parallax="-0.08">
-      <img class="dia" src="../img/turno-dia.webp" width="780" height="1530" alt="Game screen: inflation at 2.5%, on target, this month's card and the responses to choose from.">
-      <img class="noche" src="../img/turno-noche.webp" width="780" height="1530" alt="Game screen: inflation at 2.5%, on target, this month's card and the responses to choose from.">
+      <img class="dia" src="../img/en/turno-dia.webp" width="780" height="1530" alt="Game screen: inflation at 2.5%, on target, jobs, credibility, this month's card and the responses with what each one does with the rate.">
+      <img class="noche" src="../img/en/turno-noche.webp" width="780" height="1530" alt="Game screen: inflation at 2.5%, on target, jobs, credibility, this month's card and the responses with what each one does with the rate.">
     </div>
   </section>
 
@@ -185,31 +191,31 @@
       <div class="seccion-cabeza">
         <p class="etiqueta">How to play</p>
         <h2>One card, one decision, one month</h2>
-        <p>Each decision is one month at the Board. What you decide today reaches prices months later, so you have to watch what is already on its way.</p>
+        <p>Each decision is one month at the Board. You start with the rate only; the statement arrives in month two and the dollars in month three. What you decide today reaches prices months later.</p>
       </div>
       <ol class="pasos">
         <li class="paso">
           <div class="paso-cabeza"><h3>This month's card arrives</h3></div>
-          <p>At the top: inflation against the target, the dollar, jobs and trust. Below: what is happening in the country.</p>
+          <p>At the top: inflation against the target, jobs and your credibility; the dollar and Congress show up when they come into play. Below: what is happening in the country.</p>
           <div class="captura">
-            <img class="dia" src="../img/carta-dia.webp" width="780" height="900" alt="The board with inflation on target and this month's card: Gamarra can't stop selling." loading="lazy">
-            <img class="noche" src="../img/carta-noche.webp" width="780" height="900" alt="The board with inflation on target and this month's card: Gamarra can't stop selling." loading="lazy">
+            <img class="dia" src="../img/en/carta-dia.webp" width="780" height="900" alt="The board with inflation on target, jobs and credibility, and this month's card: Gamarra can't stop selling." loading="lazy">
+            <img class="noche" src="../img/en/carta-noche.webp" width="780" height="900" alt="The board with inflation on target, jobs and credibility, and this month's card: Gamarra can't stop selling." loading="lazy">
           </div>
         </li>
         <li class="paso">
           <div class="paso-cabeza"><h3>Compare and choose</h3></div>
-          <p>Each response shows who it hurts. Tap it and it tells you why.</p>
+          <p>Each response says what it does with the rate, and with the dollars or the statement when they are in play, and who it hurts. Tap it and it tells you why.</p>
           <div class="captura">
-            <img class="dia" src="../img/elegida-dia.webp" width="780" height="900" alt="The response "Subir un paso" (raise one step) selected: Kevin suffers because his loan payment gets heavier." loading="lazy">
-            <img class="noche" src="../img/elegida-noche.webp" width="780" height="900" alt="The response "Subir un paso" (raise one step) selected: Kevin suffers because his loan payment gets heavier." loading="lazy">
+            <img class="dia" src="../img/en/elegida-dia.webp" width="780" height="900" alt="A response selected, with what it does with the rate and who it helps or hurts." loading="lazy">
+            <img class="noche" src="../img/en/elegida-noche.webp" width="780" height="900" alt="A response selected, with what it does with the rate and who it helps or hurts." loading="lazy">
           </div>
         </li>
         <li class="paso">
-          <div class="paso-cabeza"><h3>Close the month</h3></div>
-          <p>You announce, see what changed, and the calendar page tears off: it tells you whether the month ended on target. Sometimes a last-minute surprise shows up.</p>
+          <div class="paso-cabeza"><h3>Predict and see what happened</h3></div>
+          <p>Before the result you guess whether inflation went up, stayed or went down. Then you see what you expected against what happened, and with "Tell me more", why.</p>
           <div class="captura">
-            <img class="dia" src="../img/almanaque-dia.webp" width="780" height="900" alt="The calendar page: January ended on target, February begins." loading="lazy">
-            <img class="noche" src="../img/almanaque-noche.webp" width="780" height="900" alt="The calendar page: January ended on target, February begins." loading="lazy">
+            <img class="dia" src="../img/en/resultado-dia.webp" width="780" height="900" alt="January's result: inflation compared with what was expected, and the prediction sign." loading="lazy">
+            <img class="noche" src="../img/en/resultado-noche.webp" width="780" height="900" alt="January's result: inflation compared with what was expected, and the prediction sign." loading="lazy">
           </div>
         </li>
       </ol>
@@ -253,9 +259,14 @@
       <div class="seccion-cabeza">
         <p class="etiqueta">Game modes</p>
         <h2>From five minutes to a full term</h2>
-        <p>Every mode has its own music, generated in the browser: chicha, huayno, tecnocumbia, Amazonian cumbia and yaraví.</p>
+        <p>Every mode has its own music, generated in the browser: chicha, huayno, tecnocumbia and yaraví.</p>
       </div>
       <div class="modos">
+        <article class="modo modo-tutorial">
+          <div class="modo-cabeza"><h3>Tutorial</h3><span class="duracion">4 guided months</span></div>
+          <p>An advisor points out each part, and you pick the response and close the month yourself. You learn by playing.</p>
+        </article>
+        <h3 class="familia">Run the BCR</h3>
         <article class="modo modo-historia">
           <div class="modo-cabeza"><h3>Story Mode</h3><span class="duracion">5 real chapters</span></div>
           <p>Relive the crises that shaped the BCR with BCRPData figures, and compare your decisions with the ones the real bank made.</p>
@@ -268,20 +279,29 @@
           </ul>
         </article>
         <article class="modo">
-          <div class="modo-cabeza"><h3>Tutorial</h3><span class="duracion">4 guided months</span></div>
-          <p>An advisor points out each part, and you pick the response and close the month yourself. You learn by playing.</p>
-        </article>
-        <article class="modo">
           <div class="modo-cabeza"><h3>Free Mode</h3><span class="duracion">12 months</span></div>
           <p>A full term, with a crisis halfway through. Do the job and the Board reappoints you.</p>
         </article>
         <article class="modo">
           <div class="modo-cabeza"><h3>Express Term</h3><span class="duracion">6 months</span></div>
-          <p>For recess or the bus ride: six quick months.</p>
+          <p>For recess or the bus ride: six quick months. It starts and ends with four quick questions, and at the end you see what you learned.</p>
+        </article>
+        <h3 class="familia">Recess</h3>
+        <article class="modo">
+          <div class="modo-cabeza"><h3>Who messed it up?</h3><span class="duracion">5 real cases</span></div>
+          <p>Real months when prices jumped. You read the month's news, question the Market Vendor, the Gas Attendant and the Fare Collector, and accuse the culprit. You have 3 lives and 5 magnifying glasses.</p>
+          <div class="captura">
+            <img class="dia" src="../img/en/malogro-dia.webp" width="780" height="900" alt="Who messed it up?: a real case with the month's clues and the three suspects." loading="lazy">
+            <img class="noche" src="../img/en/malogro-noche.webp" width="780" height="900" alt="Who messed it up?: a real case with the month's clues and the three suspects." loading="lazy">
+          </div>
         </article>
         <article class="modo">
-          <div class="modo-cabeza"><h3>Weekly Challenge</h3><span class="duracion">6 months</span></div>
-          <p>The same cards for everyone. Compare your score with your class.</p>
+          <div class="modo-cabeza"><h3>Easy installments? Hold on!</h3><span class="duracion">6 months</span></div>
+          <p>Make it to payday: pick a bank card or a municipal savings bank card, decide how to pay for each craving or mishap, and whether to pay the minimum or all of it. With the real BCRP rates.</p>
+          <div class="captura">
+            <img class="dia" src="../img/en/cuotitas-dia.webp" width="780" height="900" alt="Easy installments? Hold on!: this month's craving, sneakers on sale, and the ways to pay for them." loading="lazy">
+            <img class="noche" src="../img/en/cuotitas-noche.webp" width="780" height="900" alt="Easy installments? Hold on!: this month's craving, sneakers on sale, and the ways to pay for them." loading="lazy">
+          </div>
         </article>
       </div>
     </div>
@@ -311,8 +331,10 @@
         <h2>For your economics class</h2>
         <p>Sol Firme is free for students, always. It runs on each student's phone, and an express game fits in a single class.</p>
         <ul>
-          <li>Weekly Challenge: the same term for the whole class.</li>
+          <li>At the end of the Express Term, "What you learned" compares the entry and exit quiz and gives a code for the teacher.</li>
+          <li>Paste your class's codes, even a whole WhatsApp chat, and see the summary. Nothing is stored or sent.</li>
           <li>Chapters with real data and their sources.</li>
+          <li>Works offline from the second visit, can be played without the timer and with a screen reader.</li>
           <li>Workshops and a teacher's guide, in the works.</li>
         </ul>
         <p><span class="pendiente">Contact email coming soon</span></p>
@@ -332,7 +354,7 @@
     <div class="adorno a-amarillo" style="top:14%;left:4%;width:clamp(64px,13vw,120px)" data-parallax="-0.3" data-giro="0.05" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-sol" x="4" y="4"/><use class="forma" href="#a-sol"/></svg></div>
     <div class="adorno a-cian" style="bottom:16%;right:6%;width:clamp(40px,8vw,64px)" data-parallax="0.35" aria-hidden="true"><svg viewBox="0 0 64 64"><use class="sombra" href="#a-estrella" x="4" y="4"/><use class="forma" href="#a-estrella"/></svg></div>
     <h2>Ready to chair the BCR?</h2>
-    <a class="btn btn-amarillo" href="https://bcrp-game.carlos-hs-92.workers.dev/">Play for free</a>
+    <a class="btn btn-amarillo" href="https://bcrp-game.carlos-hs-92.workers.dev/?lang=en">Play for free</a>
   </section>
 </main>
 
