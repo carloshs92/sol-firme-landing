@@ -4,12 +4,12 @@
 
 Sol Firme is a free educational game about monetary policy in Peru. You chair Peru's central bank (BCR) and keep inflation inside the 1%–3% target band, month after month, without switching the economy off. Independent project, not affiliated with the BCRP. The game is available in Spanish, English (?lang=en) and Southern Quechua (?lang=qu, pending native review).
 
-- Jugar (gratis, en el navegador, sin cuenta; funciona sin internet desde la segunda visita): https://bcrp-game.carlos-hs-92.workers.dev/
-- Play in English: https://bcrp-game.carlos-hs-92.workers.dev/?lang=en
-- Runasimipi pukllay (quechua sureño, en prueba): https://bcrp-game.carlos-hs-92.workers.dev/?lang=qu
-- Página en español: https://carloshs92.github.io/sol-firme-landing/
-- English page: https://carloshs92.github.io/sol-firme-landing/en/
-- Runasimi (quechua sureño, borrador): https://carloshs92.github.io/sol-firme-landing/qu/
+- Jugar (gratis, en el navegador, sin cuenta; funciona sin internet desde la segunda visita): https://solfirmejuego.carloshuamani.com/
+- Play in English: https://solfirmejuego.carloshuamani.com/?lang=en
+- Runasimipi pukllay (quechua sureño, en prueba): https://solfirmejuego.carloshuamani.com/?lang=qu
+- Página en español: https://solfirme.carloshuamani.com/
+- English page: https://solfirme.carloshuamani.com/en/
+- Runasimi (quechua sureño, borrador): https://solfirme.carloshuamani.com/qu/
 
 ## Cómo se juega
 
