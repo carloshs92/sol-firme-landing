@@ -23,7 +23,7 @@ Página de presentación de [Sol Firme](https://github.com/carloshs92/bcrp-game)
 
 ## Enlace al juego
 
-"Jugar ahora" y "Jugar gratis" llevan a la dirección donde esté publicado el juego. Hoy apuntan a `https://bcrp-game.carlos-hs-92.workers.dev/` (Cloudflare Workers); si el juego se publica en otro lugar, se cambian esos dos `href` en cada una de las tres páginas.
+"Jugar ahora" y "Jugar gratis" llevan a la dirección donde esté publicado el juego. Hoy apuntan a `https://solfirmejuego.carloshuamani.com/` (Cloudflare Workers); si el juego se publica en otro lugar, se cambian esos dos `href` en cada una de las tres páginas.
 
 ## Ver en local
 
@@ -33,4 +33,6 @@ npx serve site
 
 ## Publicar
 
-En Settings → Pages, elegir "GitHub Actions" como fuente una sola vez. Después cada merge a `main` publica en `https://carloshs92.github.io/sol-firme-landing/`.
+En Settings → Pages, elegir "GitHub Actions" como fuente una sola vez. Después cada merge a `main` publica en `https://solfirme.carloshuamani.com/`.
+
+Dominio propio: `site/CNAME` guarda `solfirme.carloshuamani.com`. En Settings → Pages → Custom domain va ese mismo nombre (con "Enforce HTTPS"), y en el DNS de `carloshuamani.com` un registro CNAME `solfirme` → `carloshs92.github.io`. La dirección vieja `carloshs92.github.io/sol-firme-landing/` redirige sola al dominio nuevo. Con el dominio en la raíz ya sirve `site/robots.txt`.
