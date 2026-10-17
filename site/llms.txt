@@ -35,7 +35,6 @@ Sol Firme is a free educational game about monetary policy in Peru. You chair Pe
   - Mandato exprés: 6 meses, cabe en una clase. Empieza y termina con 4 preguntas rápidas.
 - Recreo (minijuegos):
   - ¿Quién la malogró?: 5 meses reales (2014–2026) en que los precios saltaron. Con la noticia del mes como pista, el jugador interroga a la Caserita (alimentos), el Grifero (combustible) y el Cobrador (pasajes) y acusa al culpable. Las causas vienen de notas publicadas (INEI y prensa).
-  - ¿Cuotitas? ¡Aguanta!: llegar a fin de mes durante seis meses eligiendo tarjeta de banco o de caja municipal, cómo pagar cada gasto y si pagar el mínimo o todo. Usa las tasas promedio reales de BCRPData.
 
 ## Para docentes
 
