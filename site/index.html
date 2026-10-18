@@ -8,6 +8,8 @@
 <meta property="og:title" content="Sol Firme · Preside el BCR por un mandato">
 <meta property="og:description" content="Un juego gratis sobre la política monetaria del Perú. Mantén la inflación entre 1% y 3% sin apagar el país.">
 <meta property="og:locale" content="es_PE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="qu_PE">
 <link rel="alternate" hreflang="es" href="https://solfirme.carloshuamani.com/">
 <link rel="alternate" hreflang="en" href="https://solfirme.carloshuamani.com/en/">
 <link rel="alternate" hreflang="qu" href="https://solfirme.carloshuamani.com/qu/">
@@ -24,6 +26,10 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Sol Firme, juego gratis: presides el BCR y mantienes la inflación entre 1% y 3%.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sol Firme · Preside el BCR por un mandato">
+<meta name="twitter:description" content="Un juego gratis sobre la política monetaria del Perú. Mantén la inflación entre 1% y 3% sin apagar el país.">
+<meta name="twitter:image" content="https://solfirme.carloshuamani.com/img/compartir-es.jpg">
+<meta name="twitter:image:alt" content="Sol Firme, juego gratis: presides el BCR y mantienes la inflación entre 1% y 3%.">
 <link rel="alternate" type="text/markdown" href="llms.txt" title="Resumen de Sol Firme para asistentes de IA">
 <script type="application/ld+json">
 {
@@ -122,9 +128,8 @@
  ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bungee&display=swap" rel="stylesheet">
+<link rel="preload" href="fuentes/bungee-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fuentes/atkinson-hyperlegible-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -177,8 +182,8 @@
       <p class="nota">Se juega en el navegador, en celular o computadora, de día o de noche. Sin cuenta y sin instalar nada, y desde la segunda visita funciona sin internet. También en inglés y en quechua.</p>
     </div>
     <div class="celular" data-parallax="-0.08">
-      <img class="dia" src="img/turno-dia.webp" width="780" height="1530" alt="Pantalla del juego: la inflación en 2.5%, dentro de la meta, el empleo, la credibilidad, la carta del mes y las respuestas con lo que hace cada una con la tasa.">
-      <img class="noche" src="img/turno-noche.webp" width="780" height="1530" alt="Pantalla del juego: la inflación en 2.5%, dentro de la meta, el empleo, la credibilidad, la carta del mes y las respuestas con lo que hace cada una con la tasa.">
+      <img class="dia" src="img/turno-dia.webp" width="780" height="1530" fetchpriority="high" alt="Pantalla del juego: la inflación en 2.5%, dentro de la meta, el empleo, la credibilidad, la carta del mes y las respuestas con lo que hace cada una con la tasa.">
+      <img class="noche" src="img/turno-noche.webp" width="780" height="1530" fetchpriority="high" alt="Pantalla del juego: la inflación en 2.5%, dentro de la meta, el empleo, la credibilidad, la carta del mes y las respuestas con lo que hace cada una con la tasa.">
     </div>
   </section>
 
